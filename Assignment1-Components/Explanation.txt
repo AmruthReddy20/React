@@ -1,0 +1,6 @@
+=> App.tsx is the actual excecuting TypeScript File in which we took 
+   a list object and passed it into the props .
+=> On Greet.tsx we defined the type of the firstname and lastname , then 
+    passed the Greetprops type to the props .now using list.map we are 
+    returning the names . 
+=>  We also defined a unique key for different list element  in h1 tag.
