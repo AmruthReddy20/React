@@ -1,0 +1,120 @@
+=>A functional component is just a plain JavaScript function that returns JSX.
+ Ex:- 
+
+import React from "react";
+function FunctionalComponent() {
+ return <h1>Hello, world</h1>;
+}
+
+Passing props:-
+<Component name="Shiori" />
+const FunctionalComponent = ({ name }) => {
+ return <h1>Hello, {name}</h1>;
+};
+          or
+const FunctionalComponent = (props) => {
+ return <h1>Hello, {props.name}</h1>;
+};
+
+Handling state in functional components with hooks:-
+const FunctionalComponent = () => {
+ const [count, setCount] = React.useState(0);
+
+ return (
+   <div>
+     <p>count: {count}</p>
+     <button onClick={() => setCount(count + 1)}>Click</button>
+   </div>
+ );
+};
+=>To use state variables in a functional component, we need to use useState Hook,
+ which takes an argument of initial state. In this case we start with 0 clicks so
+  the initial state of count will be 0.
+=>Of course you can have more variety of initial state including null, string, or 
+even object - any type that JavaScript allows! And on the left side, as useState 
+returns the current state and a function that updates it, we are destructuring the
+array like this.
+
+
+
+_________________________________________________________________________
+
+A class component is a JavaScript class that extends React.Component which has a render method.
+Ex:-
+import React from "react";
+ 
+const FunctionalComponent = () => {
+ return <h1>Hello, world</h1>;
+};
+
+=> when defining a class component, you have to make a class that extends React.Component. 
+    The JSX to render will be returned inside the render method. 
+
+Passing props:-
+class ClassComponent extends React.Component {
+  render() {
+    const { name } = this.props;
+    return <h1>Hello, { name }</h1>;
+ }
+}
+
+Handling state in class components:-
+
+class ClassComponent extends React.Component {
+ constructor(props) {
+   super(props);
+   this.state = {
+     count: 0
+   };
+ }
+
+ render() {
+   return (
+     <div>
+       <p>count: {this.state.count} times</p>
+       <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+         Click
+       </button>
+     </div>
+   );
+ }
+}
+
+=> Hooks is used with functional component these days , so ClassComponent is not used .
+
+=>“The constructor for a React component is called before it is mounted. When implementing 
+the constructor for a React.Component subclass, you should call super(props) before any other 
+statement. Otherwise, this.props will be undefined in the constructor, which can lead to bugs.”
+
+=>Basically, without implementing the constructor and calling super(props), all the state 
+variables that you are trying to use will be undefined. So let’s define the constructor first.
+=>Inside the constructor, you will make a state object with a state key and initial value.
+  And inside JSX, we use this.state.count to access the value of the state key we defined
+  in the constructor to display the count. Setter is pretty much the same, just different 
+  syntax.
+=>Alternatively, you can write an onClick function. Remember, the setState function takes
+ argument(s) of state, props(optional) if needed.
+
+onClick={() =>
+  this.setState((state) => {
+    return { count: state.count + 1 };
+  })
+}
+
+
+Conclusion :--
+
+There are pros and cons in both styles but I would like to conclude that functional components are taking over modern React in the foreseeable future.
+
+As we noticed in the examples, a functional component is written shorter and simpler, which makes it easier to develop, understand, and test. Class 
+components can also be confusing with so many uses of this. Using functional components can easily avoid this kind of mess and keep everything clean.
+
+It should also be noted that the React team is supporting more React hooks for functional components that replace or even improve upon class components. To follow up, the React 
+team mentioned in earlier days that they will make performance optimizations in functional components by
+ avoiding unnecessary checks and memory allocations. And as promising as it sounds, new hooks are recently introduced for functional components such as useState or useEffect while also promising that they 
+are not going to obsolete class components. The team is seeking to gradually adopt functional components with hooks in newer cases, which means that there 
+is no need to switch over the existing projects that utilize class components to the entire rewrite with functional components so that they can remain consistent.
+
+
+
+
