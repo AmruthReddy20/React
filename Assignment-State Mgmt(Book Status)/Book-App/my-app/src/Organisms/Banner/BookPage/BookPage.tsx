@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Typography } from '@mui/material';
 import BookDetails from '../BookDetails/BookDetails';
 import { StateProps } from '../../../Types/Types';
-import data from '../../../db.json';
+import { useParams } from 'react-router-dom';
+//import data from '../../../db.json';
+import axios from 'axios';
 const BookPage = () => {
   const dummy = {
     id: '0',
@@ -11,8 +13,21 @@ const BookPage = () => {
     reads: '',
   };
 
-  const book: StateProps = data.books[1];
+  //const book: StateProps = data.books[1];
+  const [book, setBooks] = useState<StateProps>({ id: '21' });
+  const { id } = useParams();
 
+  useEffect(() => {
+    const getBook = async () => {
+      await axios
+        .get(`http://localhost:8000/books/${id}`)
+        .then((res) => {
+          console.log(res.data);
+          setBooks(res.data);
+        });
+    };
+    getBook();
+  }, []);
   return (
     <div
       data-testid="book_page"

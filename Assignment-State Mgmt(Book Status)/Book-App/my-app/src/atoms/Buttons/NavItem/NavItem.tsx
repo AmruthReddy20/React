@@ -43,7 +43,7 @@ const NavItem = (props: Props) => {
         height: height,
       }}
     >
-      <div>{startIcon}</div>
+      <div data-testid="startIcon">{startIcon}</div>
       <Typography
         variant={typo}
         sx={{
@@ -56,7 +56,7 @@ const NavItem = (props: Props) => {
       >
         {children}
       </Typography>
-      <div>{endIcon}</div>
+      <div data-testid="endIcon">{endIcon}</div>
     </div>
   );
 };

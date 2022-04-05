@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Card,
   CardMedia,
@@ -10,7 +10,7 @@ import {
 
 import { TimeIcon, UserIcon } from '../../Icons';
 import { StateProps } from '../../Types/Types';
-
+import axios from 'axios';
 interface Props {
   children?: React.ReactNode;
   img: StateProps;
@@ -18,6 +18,30 @@ interface Props {
 }
 
 const CardComponent = ({ children, img }: Props) => {
+  const [state, setState] = useState<boolean>(false);
+  useEffect(() => {
+    const getBook = async () => {
+      await axios.get('http://localhost:8000/books').then((res) => {
+        console.log(res.data);
+        // setState(res.data);
+      });
+    };
+    getBook();
+  }, [state]);
+
+  const handleStatus = async (id: string) => {
+    console.log(id);
+    const result = await axios
+      .patch(`http://localhost:8000/books/${id}`, {
+        status:
+          img.status === 'finished' ? 'currentlyReading' : 'finished',
+      })
+      .then((res) => {
+        console.log(res.data);
+      });
+    //setState(!state);
+    window.location.reload();
+  };
   return (
     <div>
       <Card>
@@ -33,11 +57,13 @@ const CardComponent = ({ children, img }: Props) => {
               justifyContent: 'flex-start',
             }}
           >
-          
             {img.title}
           </Typography>
-          <Typography variant="body1" color="text.secondary" sx={{display: 'flex',
-              justifyContent: 'flex-start',}}>
+          <Typography
+            variant="body1"
+            color="text.secondary"
+            sx={{ display: 'flex', justifyContent: 'flex-start' }}
+          >
             {img.author}
           </Typography>
           <div
@@ -86,7 +112,12 @@ const CardComponent = ({ children, img }: Props) => {
             ) : undefined}
           </div>
         </CardContent>
-        <CardActions sx={{ padding: '0px' }}>{children}</CardActions>
+        <CardActions
+          sx={{ padding: '0px' }}
+          onClick={() => handleStatus(img.id)}
+        >
+          {children}
+        </CardActions>
       </Card>
     </div>
   );
@@ -96,8 +127,8 @@ const BookCard = ({ children, img, status }: Props) => {
   return (
     <div>
       {status === undefined ? (
-         <Link href={`/bookdetails/${img.id}`}>
-        <CardComponent children={children} img={img} />
+        <Link href={`/bookdetails/${img.id}`}>
+          <CardComponent children={children} img={img} />
         </Link>
       ) : (
         <CardComponent children={children} img={img} />

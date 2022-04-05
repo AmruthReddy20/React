@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Grid } from '@mui/material';
 import BookCard from '../../../Molecules/BookCard/BookCard';
 import { StateProps } from '../../../Types/Types';
-import data from '../../../db.json';
+import axios from 'axios';
+//import data from '../../../db.json';
 interface Props {
   children?: React.ReactNode;
   label?: string;
 }
 
 const BookGrid = ({ children, label }: Props) => {
-  const books = data.books;
+  //const books = data.books;
+
+  const [books, setBooks] = useState<StateProps[]>([{ id: '21' }]);
+
+  useEffect(() => {
+    const getBook = async () => {
+      await axios.get('http://localhost:8000/books').then((res) => {
+        console.log(res.data);
+        setBooks(res.data);
+      });
+    };
+    getBook();
+  },[]);
   return (
     <Grid
       data-testid="grid_container"

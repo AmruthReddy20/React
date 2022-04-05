@@ -13,7 +13,7 @@ import {
 } from 'react-router-dom';
 function App() {
   return (
-    <main className="App">
+    <div className="App">
       <ThemeProvider theme={customTheme}>
          <Routes>
             <Route path="/" element={<LandingPage />} />
@@ -25,7 +25,7 @@ function App() {
 
           </Routes>
       </ThemeProvider>
-    </main>
+    </div>
   );
 }
 

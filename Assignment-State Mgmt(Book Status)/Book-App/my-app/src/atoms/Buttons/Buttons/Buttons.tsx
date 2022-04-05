@@ -45,6 +45,8 @@ const Buttons = (props: Props) => {
         color={color}
         sx={{ width: '100%', alignItems: 'center' }}
       >
+        <h2 test-id="id-2"> Hello </h2>
+        <h3 title="Header">There</h3> 
         <NavItem
           children={children}
           startIcon={startIcon}
