@@ -1,58 +1,310 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1649180357976" clover="3.2.0">
-  <project timestamp="1649180357976" name="All files">
-    <metrics statements="38" coveredstatements="35" conditionals="2" coveredconditionals="1" methods="14" coveredmethods="13" elements="54" coveredelements="49" complexity="0" loc="38" ncloc="38" packages="2" files="3" classes="3"/>
-    <package name="features">
+<coverage generated="1649250042658" clover="3.2.0">
+  <project timestamp="1649250042658" name="All files">
+    <metrics statements="158" coveredstatements="142" conditionals="22" coveredconditionals="14" methods="64" coveredmethods="54" elements="244" coveredelements="210" complexity="0" loc="158" ncloc="158" packages="24" files="25" classes="25"/>
+    <package name="src">
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="Icons.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/Icons.tsx">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="14" type="stmt"/>
+        <line num="9" count="14" type="stmt"/>
+        <line num="17" count="14" type="stmt"/>
+        <line num="22" count="14" type="stmt"/>
+        <line num="27" count="14" type="stmt"/>
+        <line num="32" count="14" type="stmt"/>
+        <line num="37" count="14" type="stmt"/>
+        <line num="42" count="14" type="stmt"/>
+        <line num="47" count="14" type="stmt"/>
+        <line num="52" count="14" type="stmt"/>
+        <line num="60" count="14" type="stmt"/>
+        <line num="65" count="14" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Molecules.BookCard">
+      <metrics statements="16" coveredstatements="13" conditionals="6" coveredconditionals="4" methods="8" coveredmethods="6"/>
+      <file name="BookCard.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/Molecules/BookCard/BookCard.tsx">
+        <metrics statements="16" coveredstatements="13" conditionals="6" coveredconditionals="4" methods="8" coveredmethods="6"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="21" count="9" type="stmt"/>
+        <line num="22" count="9" type="stmt"/>
+        <line num="23" count="9" type="stmt"/>
+        <line num="24" count="9" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="29" count="9" type="stmt"/>
+        <line num="32" count="9" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="45" count="9" type="stmt"/>
+        <line num="117" count="1" type="stmt"/>
+        <line num="126" count="7" type="stmt"/>
+        <line num="127" count="9" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Molecules.ButtonsGroup">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="ButtonsGroup.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/Molecules/ButtonsGroup/ButtonsGroup.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Molecules.ReadAgain">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="ReadAgain.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/Molecules/ReadAgain/ReadAgain.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Molecules.SearchBar">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="SearchBar.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/Molecules/SearchBar/SearchBar.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Molecules.TabsBar">
+      <metrics statements="10" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="4"/>
+      <file name="TabsBar.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/Molecules/TabsBar/TabsBar.tsx">
+        <metrics statements="10" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="4"/>
+        <line num="13" count="8" type="stmt"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="31" count="8" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="41" count="8" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="45" count="4" type="stmt"/>
+        <line num="47" count="4" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="51" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Molecules.TabsMenu">
+      <metrics statements="10" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="4"/>
+      <file name="TabsMenu.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/Molecules/TabsMenu/TabsMenu.tsx">
+        <metrics statements="10" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="4"/>
+        <line num="11" count="9" type="stmt"/>
+        <line num="13" count="9" type="stmt"/>
+        <line num="29" count="9" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="39" count="9" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="3" type="stmt"/>
+        <line num="45" count="3" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="52" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Organisms.Banner.Banner">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Banner.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/Organisms/Banner/Banner/Banner.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Organisms.Banner.BookDetails">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="BookDetails.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/Organisms/Banner/BookDetails/BookDetails.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Organisms.Banner.BookGrid">
+      <metrics statements="12" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="5"/>
+      <file name="BookGrid.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/Organisms/Banner/BookGrid/BookGrid.tsx">
+        <metrics statements="12" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="5"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="15" count="10" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="18" count="10" type="stmt"/>
+        <line num="19" count="10" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="24" count="10" type="stmt"/>
+        <line num="26" count="10" type="stmt"/>
+        <line num="40" count="6" type="stmt"/>
+        <line num="47" count="4" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Organisms.Banner.BookGroup">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="BookGroup.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/Organisms/Banner/BookGroup/BookGroup.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="27" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Organisms.Banner.BookPage">
+      <metrics statements="11" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="3"/>
+      <file name="BookPage.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/Organisms/Banner/BookPage/BookPage.tsx">
+        <metrics statements="11" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="3"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Organisms.Banner.DropDown">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="DropDown.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/Organisms/Banner/DropDown/DropDown.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="138" count="3" type="stmt"/>
+        <line num="161" count="5" type="stmt"/>
+        <line num="162" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Organisms.Banner.Footer">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="Footer.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/Organisms/Banner/Footer/Footer.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
+        <line num="37" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Organisms.Banner.Header">
+      <metrics statements="8" coveredstatements="5" conditionals="6" coveredconditionals="2" methods="3" coveredmethods="1"/>
+      <file name="Header.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/Organisms/Banner/Header/Header.tsx">
+        <metrics statements="8" coveredstatements="5" conditionals="6" coveredconditionals="2" methods="3" coveredmethods="1"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="21" count="7" type="stmt"/>
+        <line num="22" count="7" type="stmt"/>
+        <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="31" count="7" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="35" count="7" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Pages">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Template.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/Pages/Template.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Pages.BookDetailsPage">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="BookDetailsPage.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/Pages/BookDetailsPage/BookDetailsPage.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Pages.LandingPage">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="LandingPage.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/Pages/LandingPage/LandingPage.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Pages.MyLibrary">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="MyLibrary.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/Pages/MyLibrary/MyLibrary.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.atoms.Buttons.Buttons">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Buttons.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/atoms/Buttons/Buttons/Buttons.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="28" count="9" type="stmt"/>
+        <line num="40" count="18" type="stmt"/>
+        <line num="41" count="18" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.atoms.Buttons.Lists">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Lists.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/atoms/Buttons/Lists/Lists.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
+        <line num="14" count="7" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.atoms.Buttons.NavItem">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="NavItem.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/atoms/Buttons/NavItem/NavItem.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="21" count="13" type="stmt"/>
+        <line num="36" count="22" type="stmt"/>
+        <line num="37" count="22" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.features">
       <metrics statements="37" coveredstatements="34" conditionals="2" coveredconditionals="1" methods="14" coveredmethods="13"/>
       <file name="BookReducer.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/features/BookReducer.tsx">
         <metrics statements="23" coveredstatements="20" conditionals="2" coveredconditionals="1" methods="9" coveredmethods="8"/>
-        <line num="5" count="2" type="stmt"/>
+        <line num="5" count="8" type="stmt"/>
         <line num="11" count="2" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
-        <line num="22" count="2" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
+        <line num="22" count="8" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
         <line num="28" count="0" type="stmt"/>
-        <line num="36" count="2" type="stmt"/>
-        <line num="40" count="2" type="stmt"/>
-        <line num="45" count="2" type="stmt"/>
+        <line num="36" count="8" type="stmt"/>
+        <line num="40" count="8" type="stmt"/>
+        <line num="45" count="8" type="stmt"/>
         <line num="46" count="2" type="stmt"/>
-        <line num="48" count="2" type="stmt"/>
+        <line num="48" count="8" type="stmt"/>
         <line num="49" count="1" type="stmt"/>
         <line num="50" count="1" type="stmt"/>
-        <line num="53" count="2" type="stmt"/>
+        <line num="53" count="8" type="stmt"/>
         <line num="54" count="1" type="stmt"/>
-        <line num="57" count="2" type="stmt"/>
-        <line num="58" count="2" type="stmt"/>
-        <line num="61" count="2" type="stmt"/>
+        <line num="57" count="8" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="61" count="8" type="stmt"/>
         <line num="62" count="0" type="stmt"/>
         <line num="63" count="0" type="stmt"/>
-        <line num="66" count="2" type="stmt"/>
-        <line num="67" count="2" type="stmt"/>
+        <line num="66" count="8" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
       </file>
       <file name="BooksReducer.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/features/BooksReducer.tsx">
         <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
-        <line num="5" count="2" type="stmt"/>
+        <line num="5" count="8" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
-        <line num="26" count="2" type="stmt"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="21" count="8" type="stmt"/>
+        <line num="26" count="8" type="stmt"/>
         <line num="27" count="2" type="stmt"/>
-        <line num="29" count="2" type="stmt"/>
+        <line num="29" count="8" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
-        <line num="35" count="2" type="stmt"/>
+        <line num="35" count="8" type="stmt"/>
         <line num="36" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="store">
+    <package name="src.store">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="store.tsx" path="/home/amrurm/Desktop/Zemoso-Assignments/React/Assignment-State Mgmt(Book Status)/Book-App/my-app/src/store/store.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="5" count="2" type="stmt"/>
+        <line num="5" count="8" type="stmt"/>
       </file>
     </package>
   </project>

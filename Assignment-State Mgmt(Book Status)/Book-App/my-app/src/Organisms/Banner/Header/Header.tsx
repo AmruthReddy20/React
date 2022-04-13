@@ -16,6 +16,7 @@ import {
   UpArrowIcon,
 } from '../../../Icons';
 import DropDown from '../DropDown/DropDown';
+import LogoutButton from '../../../LogoutButton';
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -44,8 +45,8 @@ const Header = () => {
       }}
     >
       <AppBar
-        color="transparent"
         position="relative"
+        color="transparent"
         sx={{
           boxShadow: 'none',
           width: '952px',
@@ -66,6 +67,7 @@ const Header = () => {
               <SearchIcon
                 sx={{ fontSize: '20.31px', marginLeft: '43.91px' }}
               />
+              {/* <NavItem children="Explore" endIcon={<DownArrowIcon sx={{height: '24px', display: 'flex', marginTop: '5px', position: 'relative', left: '6.7px', top: '5px'}}/>}/> */}
               <Typography
                 variant="body1"
                 sx={{
@@ -77,8 +79,8 @@ const Header = () => {
                 Explore
               </Typography>
               <IconButton
-                onClick={handleClick}
                 disableRipple
+                onClick={handleClick}
                 sx={{
                   width: '10.61px',
                   margin: '0px 40.7px 0px 6.7px',
@@ -92,43 +94,20 @@ const Header = () => {
                   <UpArrowIcon />
                 )}
               </IconButton>
-
-              <Link href="/mylibrary" sx={{ textDecoration: 'none' }}>
+              <Link href="/mylibrary">
                 <Typography
                   variant="body1"
-                  sx={{
-                    fontWeight: '500',
-                    color: '#03314B',
-                  }}
+                  sx={{ fontWeight: '500', color: '#03314B' }}
                 >
                   My Library
                 </Typography>
               </Link>
             </div>
-            <div style={{ display: 'flex' }}>
-              <Button disableRipple>
-                <Avatar
-                  sx={{
-                    display: 'flex',
-                    justifyContent: 'flexEnd',
-                    backgroundColor: '#69A6E3',
-                  }}
-                >
-                  A
-                </Avatar>
-                <DownArrowIcon
-                  sx={{
-                    marginTop: '15px',
-                    marginLeft: '5px',
-                    color: 'text2.main',
-                  }}
-                />
-              </Button>
-            </div>
+            <LogoutButton />
           </Toolbar>
         </Container>
       </AppBar>
-      <div>
+      <div style={{ width: '100%' }}>
         {anchorEl && (
           <DropDown anchorEl={anchorEl} handleClose={handleClose} />
         )}

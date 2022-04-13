@@ -1,7 +1,7 @@
 import NavItem from './NavItem';
 import React from 'react';
 import '@testing-library/jest-dom';
-import { render, fireEvent, screen } from '@testing-library/react';
+import { render,  screen } from '@testing-library/react';
 import { Icon1 } from '../../../Icons';
 test('check whether text render', () => {
   render(<NavItem children="child" />);

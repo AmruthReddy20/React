@@ -1,7 +1,7 @@
 import Lists from './Lists'; 
 import React from 'react';
 import '@testing-library/jest-dom';
-import { render, fireEvent, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 test('check if renders',  () => {
   render(<Lists />);

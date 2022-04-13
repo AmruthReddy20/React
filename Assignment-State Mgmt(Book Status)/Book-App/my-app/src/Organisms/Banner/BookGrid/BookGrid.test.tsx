@@ -2,16 +2,12 @@ import * as React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import BookGrid from './BookGrid';
-import { Provider } from 'react-redux';
-import { store } from '../../../store/store';
 import '@testing-library/jest-dom';
 import Buttons from '../../../atoms/Buttons/Buttons/Buttons';
 
 test('checks whether component renders', () => {
   render(
-    <Provider store={store}>
-      <BookGrid children={<Buttons children="click me" />} />{' '}
-    </Provider>
+      <BookGrid children={<Buttons children="click me" />} />
   );
   const grid = screen.getByTestId('grid_container');
   expect(grid).toBeInTheDocument();

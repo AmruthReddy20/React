@@ -23,7 +23,7 @@ export const getOneBook = createAsyncThunk(
   'books/getOneBook',
   async (id: string | undefined) => {
     const { data } = await axios.get(
-      `http://localhost:3004/books/${id}`
+      `http://localhost:8000/books/${id}`
     );
     return data;
   }

@@ -1,4 +1,3 @@
-import React from 'react';
 import { screen, render, fireEvent } from '@testing-library/react';
 import BookCard from './BookCard';
 import Buttons from '../../atoms/Buttons/Buttons/Buttons';
@@ -6,8 +5,6 @@ import { AddIcon } from '../../Icons';
 import ReadAgain from '../ReadAgain/ReadAgain';
 import '@testing-library/jest-dom';
 
-import { Provider } from 'react-redux';
- import { store } from '../../store/store';
 const data = {
   id: '1',
   image: '/Images/1.png',
@@ -36,18 +33,16 @@ const allProps = {
 
 test('test in bookcard', () => {
   render(
-    <Provider store={store}>
-      <BookCard
-        img={data}
-        children={
-          <Buttons
-            variant="contained"
-            {...allProps}
-            color="secondary"
-          />
-        }
-      />
-    </Provider>
+    <BookCard
+      img={data}
+      children={
+        <Buttons
+          variant="contained"
+          {...allProps}
+          color="secondary"
+        />
+      }
+    />
   );
   const btnElement = screen.getByText('Add to library');
   expect(btnElement).toBeInTheDocument();
@@ -55,18 +50,16 @@ test('test in bookcard', () => {
 
 test('on click test on add to library', () => {
   render(
-    <Provider store={store}>
-      <BookCard
-        img={data}
-        children={
-          <Buttons
-            variant="contained"
-            {...allProps}
-            color="secondary"
-          />
-        }
-      />
-    </Provider>
+    <BookCard
+      img={data}
+      children={
+        <Buttons
+          variant="contained"
+          {...allProps}
+          color="secondary"
+        />
+      }
+    />
   );
   const btnElement = screen.getByRole('button');
   fireEvent.click(btnElement);
@@ -74,9 +67,7 @@ test('on click test on add to library', () => {
 
 test('read again bookcard test', () => {
   render(
-    <Provider store={store}>
-      <BookCard img={data} children={<ReadAgain label="reading" />} />
-    </Provider>
+    <BookCard img={data} children={<ReadAgain label="reading" />} />
   );
   const btnElement = screen.getByText('reading');
   expect(btnElement).toBeInTheDocument();
